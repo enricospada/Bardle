@@ -1220,7 +1220,7 @@ this.wordle.bundle = function(e) {
     var Za = "IN_PROGRESS"
       , es = "WIN"
       , as = "FAIL"
-      , ss = ["...and some have greatness thrust upon them", "Sound trumpets!", "To do a great right do a little wrong", "It is not in the stars to hold our destiny but in ourselves", "There is nothing either good or bad but thinking makes it so", "Zounds"]
+      , ss = ["...and some have greatness thrust upon them", "To do a great right do a little wrong", "Some achieve greatness...", "So shines a good deed", "There is nothing either good or bad but thinking makes it so", "Zounds"]
       , ts = function(e) {
         r(t, e);
         var a = h(t);
