@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <title>Bardle - A daily Shakespearean word game</title>
+    <meta name="description" content="Guess a new secret word each day!">
+
+    <!-- FB Meta Tags -->
+    <meta property="og:url" content="https://www.powerlanguage.co.uk/wordle/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bardle - A daily dose of Shakespeare's wild & whirling words">
+    <meta property="og:description" content="Guess a new secret word each day!">
+    <meta property="og:image" content="https://www.dailywordle.com/images/wordle_og_1200x630.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="powerlanguage.co.uk">
+
+    <meta name="theme-color" content="#6aaa64" />
+    <link rel="manifest" href="manifest.json" />
+    <link href="images/bardle_logo_32x32.png" rel="icon shortcut" sizes="3232" />
+    <link href="images/bardle_logo_192x192.png" rel="apple-touch-icon" />
+
+    <style>
+      /* Add Display Font */
+      @import url('https://fonts.googleapis.com/css2?family=Estonia&display=swap');
+      .estonia {
+        font-family: 'Estonia', cursive, serif;
+      }
+      /* Global Styles & Colors */
+      :root {
+        --red: #8a3737; /* #6aaa64 */
+        --darkendRed: #561b1b; /* #538d4e */
+        --yellow: #e5a900; /* #c9b458 */
+        --darkendYellow: #b59f3b; /* #b59f3b */
+        --lightGray: #d8d8d8; /* #d8d8d8 */
+        --gray: #86888a; /* #86888a */
+        --darkGray: #939598; /* #939598 */
+        --white: #ffffff; /* #ffffff */
+        --black: #212121; /* #212121 */
+        /* Colorblind colors */
+        --orange: #f5793a; /* #f5793a */
+        --blue: #85c0f9; /* #85c0f9 */
+        font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 16px;
+        --header-height: 50px;
+        --keyboard-height: 200px;
+        --game-max-width: 500px;
+      }
+      /* Light theme colors */
+      :root {
+        --color-tone-1: #4a4336; /*#1a1a1b */
+        --color-tone-2: #7b705a; /*#787c7e */
+        --color-tone-3: #ac9c7d; /*#878a8c */
+        --color-tone-4: #ddc9a1; /*#d3d6da */
+        --color-tone-5: #f6dfb3; /*#edeff1 */
+        --color-tone-6: #f8e5c2; /*#f6f7f8 */
+        --color-tone-7: #faecd1; /*#ffffff */
+        --opacity-50: rgba(255, 255, 255, 0.5);
+      }
+      /* Dark Theme Colors */
+      .nightmode {
+        --color-tone-1: #dadad9; /* #d7dadc */
+        --color-tone-2: #90918d; /* #818384 */
+        --color-tone-3: #6b6d67; /* #565758 */
+        --color-tone-4: #31322e; /* #3a3a3c */
+        --color-tone-5: #383a34; /* #272729 */
+        --color-tone-6: #3f413b; /* #1a1a1b */
+        --color-tone-7: #464841; /* #121213 */
+        --opacity-50: rgba(70, 72, 65, 0.5);
+      }
+      /* Constant colors and colors derived from theme */
+      :root,
+      .nightmode {
+        --color-background: var(--color-tone-7);
+      }
+      :root {
+        --color-present: var(--yellow);
+        --color-correct: var(--red);
+        --color-absent: var(--color-tone-2);
+        --tile-text-color: var(--color-tone-7);
+        --key-text-color: var(--color-tone-1);
+        --key-evaluated-text-color: var(--color-tone-7);
+        --key-bg: var(--color-tone-4);
+        --key-bg-present: var(--color-present);
+        --key-bg-correct: var(--color-correct);
+        --key-bg-absent: var(--color-absent);
+        --modal-content-bg: var(--color-tone-7);
+      }
+      .nightmode {
+        --color-present: var(--darkendYellow);
+        --color-correct: var(--darkendRed);
+        --color-absent: var(--color-tone-4);
+        --tile-text-color: var(--color-tone-1);
+        --key-text-color: var(--color-tone-1);
+        --key-evaluated-text-color: var(--color-tone-1);
+        --key-bg: var(--color-tone-2);
+        --key-bg-present: var(--color-present);
+        --key-bg-correct: var(--color-correct);
+        --key-bg-absent: var(--color-absent);
+        --modal-content-bg: var(--color-tone-7);
+      }
+      .colorblind {
+        --color-correct: var(--orange);
+        --color-present: var(--blue);
+        --tile-text-color: var(--white);
+        --key-bg-present: var(--color-present);
+        --key-bg-correct: var(--color-correct);
+        --key-bg-absent: var(--color-absent);
+      }
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        background-color: var(--color-background);
+        margin: 0;
+        padding: 0;
+        /* Prevent scrollbar appearing on page transition */
+        overflow-y: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SSGMHY3NP"></script> -->
+    <!-- <script>
+      (function () {
+        // Defining the hash before the main bundle allows the bundle access window.hash
+        window.wordle = window.wordle || {};
+        window.wordle.hash = 'e65ce0a5';
+      })();
+    </script> -->
+    <script src="main.bardle.001.js"></script>
+    <game-app></game-app>
+  </body>
+</html>
