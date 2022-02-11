@@ -8,11 +8,11 @@
     <meta name="description" content="Guess a new secret word each day!">
 
     <!-- FB Meta Tags -->
-    <meta property="og:url" content="https://www.powerlanguage.co.uk/wordle/">
+    <meta property="og:url" content="https://enricospada.github.io/Bardle/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bardle - A daily dose of Shakespeare's wild & whirling words">
-    <meta property="og:description" content="Guess a new secret word each day!">
-    <meta property="og:image" content="https://www.dailywordle.com/images/wordle_og_1200x630.png">
+    <meta property="og:description" content="A new word from Shakespeare every day!">
+    <meta property="og:image" content="https://enricospada.github.io/Bardle/images/wordle_og_1200x630.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -122,16 +122,17 @@
         overflow-y: hidden;
       }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7X4BKRNMBT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7X4BKRNMBT');
+    </script>
   </head>
   <body>
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-2SSGMHY3NP"></script> -->
-    <!-- <script>
-      (function () {
-        // Defining the hash before the main bundle allows the bundle access window.hash
-        window.wordle = window.wordle || {};
-        window.wordle.hash = 'e65ce0a5';
-      })();
-    </script> -->
     <script src="main.bardle.001.js"></script>
     <game-app></game-app>
   </body>
